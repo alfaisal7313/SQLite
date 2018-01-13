@@ -5,6 +5,7 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -80,10 +81,21 @@ public class AddActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_save:
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                addDataBook();
-                finish();
+                if (TextUtils.isEmpty(titleBook.getText().toString())){
+                    titleBook.setError("Please insert title book");
+                }else if (TextUtils.isEmpty(authorBook.getText().toString())){
+                    authorBook.setError("Please insert author book");
+                }else if (TextUtils.isEmpty(categoriesBook.getText().toString())){
+                    categoriesBook.setError("Please insert categories book");
+                }else if (TextUtils.isEmpty(releaseBook.getText().toString())){
+                    releaseBook.setError("Please insert release date book");
+                } else{
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                    addDataBook();
+                    finish();
+                }
+
                 break;
         }
         return super.onOptionsItemSelected(item);
