@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_16dp"
+    android:orientation="vertical"
+    tools:context="com.example.macbook.sqlite.AddActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_16dp"
+        android:text="Book Data"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        app:hintAnimationEnabled="true">
+
+        <EditText
+            android:id="@+id/edt_titleBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title Book"
+            android:inputType="textCapWords"
+            android:textColor="@android:color/black" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        app:hintAnimationEnabled="true">
+
+        <EditText
+            android:id="@+id/edt_authorBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Author Book"
+            android:inputType="textCapWords"
+            android:textColor="@android:color/black" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        app:hintAnimationEnabled="true">
+
+        <EditText
+            android:id="@+id/edt_categoriesBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Categories Book"
+            android:inputType="textCapWords"
+            android:textColor="@android:color/black" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_8dp"
+        app:hintAnimationEnabled="true">
+
+        <EditText
+            android:id="@+id/edt_releaseBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_calender"
+            android:drawableRight="@drawable/ic_calender"
+            android:hint="Release Book"
+            android:onClick="showDatePicker"
+            android:inputType="date"
+            android:textColor="@android:color/black"/>
+    </android.support.design.widget.TextInputLayout>
+
+</LinearLayout>
